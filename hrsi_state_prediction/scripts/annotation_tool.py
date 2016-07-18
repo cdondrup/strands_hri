@@ -179,7 +179,7 @@ class SimpleAppTk(Tkinter.Tk):
             if self.draw:
                 self.canvas.create_line(h0.x, h0.y, h1.x, h1.y, fill="red", width=4)
                 self.canvas.create_line(r0.x, r0.y, r1.x, r1.y, fill="blue", width=4)
-                time.sleep(.2)
+                time.sleep(.05)
             else:
                 break
 #        print("WHILE_END")
@@ -300,7 +300,7 @@ if __name__ == '__main__':
         min_min_dist=args.min_min_dist,
         min_travel_dist=args.min_travel_dist
     )
-    app.title("MyApp")
+    app.title("AnnotationTool")
     app.mainloop()
     app.draw = False
     app.t.join()
