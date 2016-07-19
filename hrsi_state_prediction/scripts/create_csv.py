@@ -82,7 +82,7 @@ if __name__=="__main__":
     parser.add_argument("config", type=str,
                         help="Path to yaml config file")
     parser.add_argument("save_path", type=str,
-                        help="Path there to save the csv files. Naming scheme: uuid.csv. Creates directories for each class found.")
+                        help="Path to save the csv files under. Naming scheme: uuid.csv. Creates directories for each class found.")
     parser.add_argument("--dbhost", type=str, default='localhost',
                         help="The database host IP.")
     parser.add_argument("--dbport", type=int, default=62345,
@@ -92,7 +92,7 @@ if __name__=="__main__":
     parser.add_argument("--data_collection", type=str, default="people_perception",
                         help="The collection in the database db that contains the people tracks")
     parser.add_argument("--annotation_collection", type=str, default="people_perception_annotations",
-                        help="The collection in the database db that should contain the results")
+                        help="The collection in the database db that contains the results")
     args = parser.parse_args()
 
     c = CreateCSV(
