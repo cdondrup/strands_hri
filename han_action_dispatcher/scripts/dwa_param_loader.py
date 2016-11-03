@@ -5,9 +5,7 @@ import rospy
 import rosparam
 
 
-class ActionDispatcher(object):
-    OLD, NEW = range(2)
-    
+class ParamLoader(object):
     def __init__(self, name):
         rospy.loginfo("Starting %s" % name)
         a_list = rospy.get_param("han_action_dispatcher")["han_actions"]
@@ -19,5 +17,5 @@ class ActionDispatcher(object):
         
 if __name__ == "__main__":
     rospy.init_node("dwa_param_loader")
-    ActionDispatcher(rospy.get_name())
+    ParamLoader(rospy.get_name())
     

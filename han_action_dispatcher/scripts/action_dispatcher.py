@@ -10,8 +10,6 @@ from han_action_dispatcher.cfg import HanActionDispatcherConfig
 
 
 class ActionDispatcher(object):
-    OLD, NEW = range(2)
-    
     def __init__(self, name):
         rospy.loginfo("Starting %s" % name)
         self.client = None
